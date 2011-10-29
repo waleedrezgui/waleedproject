@@ -12,10 +12,9 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */ 
- 
-/*	\version   $Id: style.css,v 1.4 2011/08/03 01:35:18 eldy Exp $ */
+ */
 
+/*	\version   $Id: style.css,v 1.4 2011/08/03 01:35:18 eldy Exp $ */
 body {
 	background: #eee;
 	color: #333;
@@ -127,7 +126,6 @@ p {
 	text-decoration: none;
 }
 
-
 /* ------------------- R�capitulatif des articles ------------------- */
 .liste_articles {
 	width: 215px;
@@ -197,7 +195,7 @@ p.titre {
 }
 
 .formulaire_login {
-	text-align: center;
+	text-align: left;
 }
 
 .formulaire_login table {
@@ -281,7 +279,7 @@ p.titre {
 
 .select_design select {
 	border: 1px solid #6d3f6d;
-    font: 12px verdana,arial,helvetica;
+	font: 12px verdana, arial, helvetica;
 	background: #fff;
 }
 
@@ -474,4 +472,3 @@ p.titre {
 	background-color: #3366cc;
 	color: white ! important;
 }
-
