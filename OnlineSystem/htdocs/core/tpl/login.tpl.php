@@ -95,8 +95,8 @@ jQuery(document).ready(function () {
 <input type="hidden" name="screenwidth" id="screenwidth" value="" />
 <input type="hidden" name="screenheight" id="screenheight" value="" />
 
-<table class="login" summary="<?php echo $title; ?>" cellpadding="0" cellspacing="0" border="0" align="center">
-<tr class="vmenu"><td align="center"><?php echo $title; ?></td></tr>
+<table class="login" summary="ERP CRM by Walid" cellpadding="0" cellspacing="0" border="0" align="center">
+<tr class="vmenu"><td align="center"><ERP CRM by Walid></td></tr>
 </table>
 <br />
 
