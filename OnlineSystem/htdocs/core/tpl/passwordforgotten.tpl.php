@@ -1,21 +1,21 @@
 <?php
 /* Copyright (C) 2009-2010 Regis Houssin <regis@dolibarr.fr>
  *
- * This program is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 2 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- *
- * $Id: passwordforgotten.tpl.php,v 1.4 2011/07/31 23:45:12 eldy Exp $
- */
+* This program is free software; you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation; either version 2 of the License, or
+* (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+*
+* You should have received a copy of the GNU General Public License
+* along with this program. If not, see <http://www.gnu.org/licenses/>.
+*
+* $Id: passwordforgotten.tpl.php,v 1.4 2011/07/31 23:45:12 eldy Exp $
+*/
 header('Cache-Control: Public, must-revalidate');
 header("Content-type: text/html; charset=".$conf->file->character_set_client);
 ?>
@@ -27,7 +27,7 @@ header("Content-type: text/html; charset=".$conf->file->character_set_client);
 <html>
 <head>
 <meta name="robots" content="noindex,nofollow">
-<title>Dolibarr Authentification</title>
+<title>Inventips Authentification</title>
 
 <link rel="stylesheet" type="text/css" href="<?php echo $conf_css; ?>">
 
@@ -37,8 +37,9 @@ header("Content-type: text/html; charset=".$conf->file->character_set_client);
 	margin-top: 70px;
 	margin-bottom: 30px;
 	text-align: center;
-	font: 12px arial,helvetica;
+	font: 12px arial, helvetica;
 }
+
 #login table {
 	width: 498px;
 	border: 1px solid #C0C0C0;
@@ -57,30 +58,46 @@ function donnefocus() {
 </head>
 
 <body class="body" onload="donnefocus();">
-<form id="login" name="login" method="post" action="<?php echo $php_self; ?>">
-<input type="hidden" name="token" value="<?php echo $_SESSION['newtoken']; ?>">
-<input type="hidden" name="action" value="buildnewpassword">
+	<form id="login" name="login" method="post"
+		action="<?php echo $php_self; ?>">
+		<input type="hidden" name="token"
+			value="<?php echo $_SESSION['newtoken']; ?>"> <input type="hidden"
+			name="action" value="buildnewpassword">
 
-<table class="login" summary="<?php echo $title; ?>" cellpadding="0" cellspacing="0" border="0" align="center">
-<tr class="vmenu"><td align="center"><?php echo $title; ?></td></tr>
-</table>
-<br>
+		<table class="login" summary="<?php echo $title; ?>" cellpadding="0"
+			cellspacing="0" border="0" align="center">
+			<tr class="vmenu">
+				<td align="center"><?php echo $title; ?></td>
+			</tr>
+		</table>
+		<br>
 
-<table class="login" summary="Login area" cellpadding="2" align="center">
+		<table class="login" summary="Login area" cellpadding="2"
+			align="center">
 
-<tr><td colspan="3">&nbsp;</td></tr>
+			<tr>
+				<td colspan="3">&nbsp;</td>
+			</tr>
 
-<tr>
+			<tr>
 
-<td valign="bottom"> &nbsp; <b><?php echo $langs->trans('Login'); ?></b> &nbsp; </td>
-<td valign="bottom" nowrap="nowrap">
-<input type="text" <?php echo $disabled; ?> id="username" name="username" class="flat" size="15" maxlength="25" value="<?php echo $login; ?>" tabindex="1" /></td>
+				<td valign="bottom">&nbsp; <b><?php echo $langs->trans('Login'); ?>
+				</b> &nbsp;
+				</td>
+				<td valign="bottom" nowrap="nowrap"><input type="text"
+					
+				<?php echo $disabled; ?> id="username" name="username"
+					class="flat" size="15" maxlength="25" value="<?php echo $login; ?>"
+					tabindex="1" /></td>
 
-<td rowspan="<?php echo $rowspan; ?>" align="center" valign="top">
-<img alt="Logo" title="" src="<?php echo $urllogo; ?>" />
-
-</td>
-</tr>
+				<td rowspan="<?php echo $rowspan; ?>" align="center" valign="top"><img
+					alt="Logo" title="" src="<?php echo $urllogo; ?>" />
+				</td>
+			</tr>
+			
+			
+			
+			
 
 <?php if ($select_entity) { ?>
 	<tr><td valign="top" nowrap="nowrap"> &nbsp; <b><?php echo $langs->trans('Entity'); ?></b> &nbsp; </td>
@@ -110,25 +127,35 @@ function donnefocus() {
 
 </table>
 
-</form>
+	</form>
 
-<center>
-<table width="90%"><tr><td align="center">
+	<center>
+		<table width="90%">
+			<tr>
+				<td align="center">
 
-<?php if ($mode == 'dolibarr' || ! $disabled) { ?>
-	<font style="font-size: 12px;">
-	<?php echo $langs->trans('SendNewPasswordDesc'); ?>
-	</font>
+				<?php if ($mode == 'dolibarr' || ! $disabled) { ?> <font
+					style="font-size: 12px;">
+					<?php echo $langs->trans('SendNewPasswordDesc'); ?> </font>
+				
+				
+				
+				
 <?php }else{ ?>
 	<div class="warning" align="center">
 	<?php echo $langs->trans('AuthenticationDoesNotAllowSendNewPassword', $mode); ?>
 	</div>
 <?php } ?>
 
-</td></tr>
-</table>
+</td>
+			</tr>
+		</table>
 
-<br>
+		<br>
+		
+		
+		
+		
 
 <?php if ($message) { ?>
 	<table width="90%"><tr><td align="center" style="font-size: 12px;">
@@ -142,8 +169,8 @@ function donnefocus() {
 </a>
 </center>
 
-<br>
-<br>
+	<br>
+	<br>
 
 </body>
 </html>
