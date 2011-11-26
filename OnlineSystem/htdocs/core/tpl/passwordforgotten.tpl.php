@@ -64,7 +64,7 @@ function donnefocus() {
 			value="<?php echo $_SESSION['newtoken']; ?>"> <input type="hidden"
 			name="action" value="buildnewpassword">
 
-		<table class="login" summary="<?php echo $title; ?>" cellpadding="0"
+		<table class="login" summary="ERP CRM inventips" cellpadding="0"
 			cellspacing="0" border="0" align="center">
 			<tr class="vmenu">
 				<td align="center"><?php echo $title; ?></td>
