@@ -43,7 +43,7 @@ header("Content-type: text/html; charset=".$conf->file->character_set_client);
 #login table {
 	width: 498px;
 	border: 1px solid #C0C0C0;
-	background: #F0F0F0 url('<?php echo $login_background; ?>') repeat-x;
+	background: #FFFFFF;
 	font-size: 12px;
 }
 -->
